@@ -42,3 +42,14 @@ const nav = document.getElementById("nav");
 nav.querySelectorAll(".nav-link").forEach(link => {
   link.addEventListener("click", () => bootstrap.Collapse.getInstance(nav)?.hide());
 });
+
+// Discord has no profile link, so clicking the handle copies it
+document.querySelectorAll(".copy").forEach(btn => {
+  const label = btn.textContent;
+  btn.addEventListener("click", () => {
+    navigator.clipboard?.writeText(btn.dataset.copy).then(() => {
+      btn.textContent = "Copied!";
+      setTimeout(() => { btn.textContent = label; }, 1500);
+    });
+  });
+});

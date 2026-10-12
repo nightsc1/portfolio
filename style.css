@@ -135,8 +135,9 @@ section h2 { font-size: clamp(2rem, 4vw, 3rem); }
   border-bottom: 2px solid var(--accent);
   word-break: break-all;
 }
-.contact-links a { color: var(--dim); }
-.contact-links a:hover { color: var(--accent); }
+.contact-links a, .copy { color: var(--dim); }
+.contact-links a:hover, .copy:hover { color: var(--accent); }
+.copy { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; }
 .contact-links .list-inline-item:not(:last-child) { margin-right: 1.5rem; }
 
 /* footer */
