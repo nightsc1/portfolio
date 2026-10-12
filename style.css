@@ -6,12 +6,12 @@
   --dim: #8b8b94;
   --accent: #4d7cff;
   --rec: #ff3b3b;
-  --font-head: "Anton", Impact, sans-serif;
-  --font-mono: "Space Mono", monospace;
+  --font-head: "Archivo", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   --bs-body-bg: var(--bg);
   --bs-body-color: var(--ink);
-  --bs-body-font-family: "DM Sans", Arial, sans-serif;
+  --bs-body-font-family: "Archivo", Arial, sans-serif;
   --bs-border-color: var(--line);
   --bs-link-color-rgb: 237, 237, 240;
   --bs-link-hover-color-rgb: 77, 124, 255;
@@ -23,7 +23,7 @@ body { -webkit-font-smoothing: antialiased; }
 
 a { text-decoration: none; }
 
-h1, h2, h3 { font-family: var(--font-head); font-weight: 400; letter-spacing: 0.01em; }
+h1, h2, h3 { font-family: var(--font-head); font-weight: 800; letter-spacing: -0.02em; }
 
 .mono { font-family: var(--font-mono); font-size: 0.8rem; }
 
@@ -33,7 +33,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 400; letter-spacing: 0.
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
-.navbar-brand { font-family: var(--font-head); font-size: 1.15rem; letter-spacing: 0.02em; }
+.navbar-brand { font-weight: 800; font-size: 1rem; }
 .navbar .nav-link { color: var(--dim); font-size: 0.9rem; }
 .navbar .nav-link:hover { color: var(--ink); }
 
@@ -46,8 +46,8 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 400; letter-spacing: 0.
 
 /* hero */
 .hero { padding: 8rem 0 6rem; }
-.hero h1 { font-size: clamp(2.6rem, 8vw, 6rem); line-height: 1.05; margin: 1.5rem 0; }
-.lead-text { color: var(--dim); font-size: 1.1rem; max-width: 34rem; }
+.hero h1 { font-size: clamp(2.6rem, 8vw, 6rem); line-height: 0.95; margin: 1.5rem 0; }
+.lead-text { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; color: var(--dim); font-size: 1.1rem; max-width: 34rem; }
 .tools { color: var(--dim); margin-top: 3rem; }
 
 .rec { color: var(--dim); display: flex; align-items: center; gap: 0.5rem; }
@@ -110,21 +110,27 @@ section h2 { font-size: clamp(2rem, 4vw, 3rem); }
   transition: border-color 0.2s;
 }
 .client:hover { border-color: var(--accent); color: inherit; }
-.client strong { display: block; font-family: var(--font-head); font-weight: 400; font-size: 1.4rem; letter-spacing: 0.01em; }
+.client strong { display: block; font-weight: 800; font-size: 1.15rem; }
 .client small { color: var(--dim); font-family: var(--font-mono); font-size: 0.75rem; }
 .avatar { border-radius: 50%; border: 1px solid var(--line); }
+.also { color: var(--dim); margin-top: 1.5rem; }
+.also a { color: var(--ink); border-bottom: 1px solid var(--accent); }
+.also a:hover { color: var(--accent); }
 
 /* reviews */
 .quote { border-left: 2px solid var(--accent); padding-left: 1.5rem; margin: 0; }
 .quote p { font-size: 1.15rem; line-height: 1.6; }
-.quote footer { color: var(--dim); font-size: 0.9rem; }
+.quote .score { font-weight: 800; color: var(--accent); }
+.quote footer { display: flex; align-items: center; gap: 0.75rem; margin-top: 1.5rem; }
+.quote footer strong { display: block; }
+.quote footer small { color: var(--dim); font-size: 0.75rem; }
 
 /* contact */
 .email {
   display: inline-block;
-  font-family: var(--font-head);
-  font-size: clamp(1.8rem, 6vw, 4rem);
-  letter-spacing: 0.01em;
+  font-size: clamp(1.6rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
   margin: 1.5rem 0;
   border-bottom: 2px solid var(--accent);
   word-break: break-all;
